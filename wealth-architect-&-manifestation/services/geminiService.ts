@@ -1,7 +1,7 @@
 import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { ManifestationResponse } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 export const generateWealthReasons = async (amount: string): Promise<ManifestationResponse> => {
   const modelId = "gemini-2.5-flash"; // Efficient for text generation
